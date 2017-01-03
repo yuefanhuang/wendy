@@ -1,5 +1,5 @@
 ####Extract information from website using xpath practice
-
+library(XML)
 fileurl<-"http://www.espn.com/nfl/team/_/name/bal/baltimore-ravens"
 doc<-htmlTreeParse(fileurl,useInternal=TRUE)
  
