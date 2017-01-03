@@ -1,0 +1,76 @@
+####Extract information from website using xpath practice
+
+fileurl<-"http://www.espn.com/nfl/team/_/name/bal/baltimore-ravens"
+doc<-htmlTreeParse(fileurl,useInternal=TRUE)
+ 
+
+xpathSApply(doc,"//a[@href='/olympics/']",xmlValue)
+[1] "Olympic Sports"
+
+xpathSApply(doc,"//a[@id='global-nav-mobile-trigger']",xmlValue)
+[1] "Menu"
+
+
+xpathSApply(doc,"//span[@class='link-text-short']",xmlValue)
+ [1] "Ravens"       "Add"          "Ravens"       "Add"          "Home"         "Stats"        "Schedule"    
+ [8] "Roster"       "Splits"       "Depth Chart"  "Transactions" "More"         "Rankings"     "Photos"      
+[15] "Stadium"      "Blog"         "Tickets"      "Shop"        
+
+
+xpathSApply(doc,"//a[@itemprop='url']",xmlValue)
+ [1] "NFL"              "NBA"              "MLB"              "NCAAF"            "Soccer"           "NCAAM"           
+ [7] "…"                "NHL"              "Golf"             "Tennis"           "MMA"              "WWE"             
+[13] "Boxing"           "esports"          "Chalk"            "Analytics"        "NCAAW"            "WNBA"            
+[19] "NASCAR"           "Racing"           "Horse"            "RN FB"            "RN BB"            "NCAA"            
+[25] "LLWS"             "Olympic Sports"   "Special Olympics" "Cricket"          "Rugby"            "X Games"         
+[31] "Endurance"        "CFL"    
+
+
+xpathSApply(doc,"//li[@class='team-name']",xmlValue)
+[1] "Baltimore RavensRavens" "Baltimore RavensRavens"
+
+
+xpathSApply(doc,"//li[@itemprop='name']",xmlValue)
+ [1] "NFL"                                                                                                                                                     
+ [2] "NBA"                                                                                                                                                     
+ [3] "MLB"                                                                                                                                                     
+ [4] "NCAAF"                                                                                                                                                   
+ [5] "Soccer"                                                                                                                                                  
+ [6] "NCAAM"                                                                                                                                                   
+ [7] "…NHLGolfTennisMMAWWEBoxingesportsChalkAnalyticsNCAAWWNBANASCARRacingHorseRN FBRN BBNCAALLWSOlympic SportsSpecial OlympicsCricketRugbyX GamesEnduranceCFL"
+ [8] "NHL"                                                                                                                                                     
+ [9] "Golf"                                                                                                                                                    
+[10] "Tennis"                                                                                                                                                  
+[11] "MMA"                                                                                                                                                     
+[12] "WWE"                                                                                                                                                     
+[13] "Boxing"                                                                                                                                                  
+[14] "esports"                                                                                                                                                 
+[15] "Chalk"                                                                                                                                                   
+[16] "Analytics"                                                                                                                                               
+[17] "NCAAW"                                                                                                                                                   
+[18] "WNBA"                                                                                                                                                    
+[19] "NASCAR"                                                                                                                                                  
+[20] "Racing"                                                                                                                                                  
+[21] "Horse"                                                                                                                                                   
+[22] "RN FB"                                                                                                                                                   
+[23] "RN BB"                                                                                                                                                   
+[24] "NCAA"                                                                                                                                                    
+[25] "LLWS"                                                                                                                                                    
+[26] "Olympic Sports"                                                                                                                                          
+[27] "Special Olympics"                                                                                                                                        
+[28] "Cricket"                                                                                                                                                 
+[29] "Rugby"                                                                                                                                                   
+[30] "X Games"                                                                                                                                                 
+[31] "Endurance"                                                                                                                                               
+[32] "CFL"                                                                                                                                                     
+[33] "Baltimore RavensRavens8-82nd in AFC North Add FavoriteAdd"                                                                                               
+[34] "Baltimore RavensRavens8-82nd in AFC North Add FavoriteAdd"    
+
+
+
+
+
+
+
+
+
